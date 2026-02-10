@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bistro Noir Lahore - Authentic French Cuisine in the Heart of Lahore. Experience luxury fine dining with French flavors and premium ingredients.">
+    <meta name="keywords" content="French restaurant Lahore, Bistro Noir, fine dining, authentic French cuisine, luxury restaurant Pakistan">
+    <meta name="author" content="Bistro Noir Lahore">
+    <title>Bistro Noir Lahore - Authentic French Cuisine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #d4af37; /* Gold */
+            line-height: 1.6;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            color: #fff;
+        }
+        a {
+            color: #d4af37;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #fff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .btn {
+            background-color: #d4af37;
+            color: #000;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #fff;
+        }
+        /* Header */
+        header {
+            background-color: #1a1a1a;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #d4af37;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-links li {
+            margin-left: 30px;
+        }
+        .nav-links a {
+            color: #d4af37;
+            font-weight: 500;
+        }
+        .nav-links a:hover {
+            color: #fff;
+        }
+        /* Hero Section */
+        .hero {
+            background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'); /* Placeholder French food image */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+        .hero .btn {
+            margin: 0 10px;
+        }
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+        .about, .menu, .gallery, .contact {
+            background-color: #000;
+        }
+        .about {
+            background-color: #1a1a1a;
+        }
+        .menu {
+            background-color: #000;
+        }
+        .gallery {
+            background-color: #1a1a1a;
+        }
+        .contact {
+            background-color: #000;
+        }
+        /* About */
+        .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .about-text {
+            flex: 1;
+            padding-right: 50px;
+        }
+        .about-image {
+            flex: 1;
+            text-align: center;
+        }
+        .about-image img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        /* Menu */
+        .menu-categories {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 40px;
+        }
+        .menu-category {
+            flex: 1;
+            margin: 0 20px;
+        }
+        .menu-item {
+            margin-bottom: 20px;
+        }
+        .menu-item h4 {
+            margin-bottom: 5px;
+        }
+        .menu-item p {
+            color: #ccc;
+        }
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        /* Contact */
+        .contact-content {
+            display: flex;
+            justify-content: space-between;
+        }
+        .contact-info {
+            flex: 1;
+            padding-right: 50px;
+        }
+        .contact-form {
+            flex: 1;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: #1a1a1a;
+            border: 1px solid #d4af37;
+            color: #fff;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            width: 100%;
+        }
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            padding: 40px 0;
+            text-align: center;
+        }
+        .social-links {
+            margin-bottom: 20px;
+        }
+        .social-links a {
+            margin: 0 10px;
+            font-size: 24px;
+        }
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: #fff;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Simple hide for mobile; in real site, add hamburger menu */
+            }
+            .hero h1 {
+                font-size: 36px;
+            }
+            .hero p {
+                font-size: 18px;
+            }
+            .about-content, .contact-content {
+                flex-direction: column;
+            }
+            .about-text, .contact-info {
+                padding-right: 0;
+                margin-bottom: 20px;
+            }
+            .menu-categories {
+                flex-direction: column;
+            }
+            .menu-category {
+                margin: 20px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Bistro Noir Lahore</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Location & Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Authentic French Cuisine in the Heart of Lahore</h1>
+            <p>Indulge in the finest French flavors crafted with premium ingredients.</p>
+            <a href="#menu" class="btn">View Menu</a>
+            <a href="#contact" class="btn">Reserve a Table</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>At Bistro Noir Lahore, we bring the elegance of French fine dining to the vibrant heart of Lahore. Our passion lies in sourcing the finest ingredients to create authentic French dishes that tantalize the senses. From classic escargots to decadent soufflés, every bite is a journey through the rich culinary heritage of France, reimagined with a touch of local inspiration.</p>
+                    <p>Our team of expert chefs, led by renowned French-trained culinary artisans, ensures that every meal is an unforgettable experience. Join us for an evening of luxury, where quality meets sophistication.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Bistro Noir Interior">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2>Our Menu</h2>
+            <div class="menu-categories">
+                <div class="menu-category">
+                    <h3>Starters</h3>
+                    <div class="menu-item">
+                        <h4>French Onion Soup</h4>
+                        <p>Caramelized onions in a rich broth topped with toasted baguette and Gruyère cheese. $12</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4>Escargots à la Bourguignonne</h4>
+                        <p>Snails in garlic-herb butter, served with crusty bread. $18</p>
+                    </div>
+                </div>
+                <div class="menu-category">
+                    <h3>Main Course</h3>
+                    <div class="menu-item">
+                        <h4>Coq au Vin</h4>
+                        <p>Braised chicken in red wine with mushrooms, onions, and herbs. $28</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4>Beef Bourguignon</h4>
+                        <p>Slow-cooked beef in Burgundy wine with carrots and pearl onions. $32</p>
+                    </div>
+                </div>
+                <div class="menu-category">
+                    <h3>Desserts</h3>
+                    <div class="menu-item">
+                        <h4>Crème Brûlée</h4>
+                        <p>Vanilla custard with a caramelized sugar crust. $10</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4>Tarte Tatin</h4>
+                        <p>Upside-down apple tart with caramel sauce. $12</p>
+                    </div>
+                </div>
+                <div class="menu-category">
+                    <h3>Beverages</h3>
+                    <div class="menu-item">
+                        <h4>French Wine Selection</h4>
+                        <p>Curated reds and whites from Bordeaux and Burgundy. $8/glass</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4>Espresso</h4>
+                        <p>Rich Italian-style coffee. $4</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="French Dish">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Restaurant Interior">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Ambiance">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1551782450-17144efb5723?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Dessert">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Dining Area">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Food Platter">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Location & Contact</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p><strong>Address:</strong> 123 Mall Road, Lahore, Pakistan</p>
+                    <p><strong>Phone:</strong> +92 300 123 4567</p>
+                    <p><strong>Opening Hours:</strong> Mon-Sun: 6 PM - 11 PM</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.0!2d74.3587!3d31.5204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190483e5810d2f%3A0x5a33a9a6085f8640!2sLahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1630000000000!5m2!1sen!2s" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="contact-form">
+                    <form action="#" method="post">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="tel" name="phone" placeholder="Your Phone">
+                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.facebook.com/bistronoirlahore" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/bistronoirlahore" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/923001234567" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p>&copy; 2023 Bistro Noir Lahore. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/923001234567" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Simple smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
